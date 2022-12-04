@@ -60,7 +60,7 @@ fi
 max_snap=$COUNT
 
 # Create new snapshot:
-cmd="btrfs subvolume snapshot -r $SOURCE $TARGET/$(date --iso-8601=seconds)-@${SNAP}"
+cmd="btrfs subvolume snapshot -r $SOURCE $TARGET-$(date --iso-8601=seconds)-@${SNAP}"
 if [ -z "$QUIET" ]; then
 	echo "$cmd"
 	$cmd
